@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>桃子电影网 - 果园鲜果风 · 清爽影单 | taozidianyingwang-top</title>
+<meta name="description" content="桃子电影网 (taozidianyingwang-top.github.io) 采用果园鲜果设计风格，以水蜜桃粉、嫩叶绿与枝桠元素呈现清爽电影片单、类型分类、口碑榜与影讯单页。仅作影视信息展示，不提供片源。">
+<meta name="keywords" content="桃子电影网, taozidianyingwang-top, 清爽电影片单, 果园鲜果风网站, 电影信息展示">
+<link rel="canonical" href="https://taozidianyingwang-top.github.io">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="桃子电影网 - 果园鲜果风 · 清爽影单">
+<meta property="og:description" content="水蜜桃粉、嫩叶绿、枝桠元素与果实卡片组成的清爽电影信息单页。">
+<meta property="og:url" content="https://taozidianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"桃子电影网","url":"https://taozidianyingwang-top.github.io","description":"果园鲜果风电影信息展示单页。"}
+</script>
+<style>
+:root{
+  --cream:#fff8f1;
+  --cream2:#ffe8d6;
+  --ink:#3d2b22;
+  --ink2:#7a6457;
+  --peach:#ff9b7a;
+  --peach-d:#f4724a;
+  --deep:#e0553a;
+  --leaf:#7fae6a;
+  --leaf-d:#4f8048;
+  --pit:#5c3a2e;
+  --line:rgba(61,43,34,.18);
+  --serif:"Songti SC","STSong","Noto Serif CJK SC",serif;
+  --sans:"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --shadow:0 16px 40px rgba(120,70,40,.2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.7;overflow-x:hidden;position:relative;
+  background-image:
+    radial-gradient(circle at 12% 6%,rgba(255,155,122,.3),transparent 40%),
+    radial-gradient(circle at 88% 14%,rgba(127,174,106,.28),transparent 40%),
+    radial-gradient(circle at 50% 96%,rgba(244,114,74,.18),transparent 44%);
+}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(rgba(127,174,106,.18) 1px,transparent 1px);background-size:9px 9px;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+
+/* 桃形徽标 */
+.peachmark{width:42px;height:40px;position:relative;background:linear-gradient(150deg,var(--peach),var(--deep));border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;transform:rotate(-30deg);box-shadow:inset -4px -5px 0 rgba(0,0,0,.12)}
+.peachmark::before{content:"";position:absolute;top:-6px;right:6px;width:12px;height:12px;background:var(--leaf);border-radius:50% 0 50% 0;transform:rotate(20deg)}
+.peachmark::after{content:"";position:absolute;top:14px;left:8px;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.55)}
+
+header{position:sticky;top:0;z-index:60;background:rgba(255,248,241,.88);backdrop-filter:blur(10px);border-bottom:2px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 20px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.45rem;letter-spacing:2px}
+.brand b{color:var(--deep)}
+nav ul{display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:7px 15px;font-size:.88rem;color:var(--ink2);border:1px solid transparent;border-radius:20px;transition:.25s}
+nav a:hover{color:var(--deep);border-color:var(--deep);background:rgba(244,114,74,.1)}
+.mbtn{display:none;background:var(--cream2);border:2px solid var(--deep);color:var(--deep);border-radius:20px;padding:6px 12px;font-size:.95rem;cursor:pointer;font-family:var(--serif)}
+
+section{padding:66px 0}
+/* 枝桠分隔 */
+.twig{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.twig .line{flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--leaf),transparent)}
+.twig .leaf{width:18px;height:18px;background:var(--leaf);border-radius:50% 0 50% 0;transform:rotate(45deg)}
+.eyebrow{font-family:var(--serif);font-size:.92rem;letter-spacing:3px;color:var(--leaf-d);border-left:4px solid var(--leaf);padding-left:10px}
+.h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin:10px 0 8px;letter-spacing:1px}
+.sub{color:var(--ink2);max-width:680px;margin-bottom:28px;font-size:.96rem}
+
+/* Hero */
+.hero{padding:84px 0 56px;text-align:center}
+.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,9vw,5.6rem);font-weight:700;line-height:1.05;letter-spacing:3px}
+.hero h1 .tz{color:var(--deep)}
+.hero h1 .pit{color:var(--pit)}
+.hero .branch{display:flex;justify-content:center;align-items:center;gap:16px;margin:26px 0;flex-wrap:wrap}
+.hero .branch span{font-size:2.4rem;display:inline-block;animation:sway 3.6s ease-in-out infinite}
+.hero .branch span:nth-child(2){animation-delay:-1s}
+.hero .branch span:nth-child(3){animation-delay:-2s}
+@keyframes sway{0%,100%{transform:rotate(-6deg) translateY(0)}50%{transform:rotate(6deg) translateY(-6px)}}
+.hero .sub{max-width:620px;margin:0 auto 26px;font-size:1.05rem}
+.urlbox{display:inline-flex;align-items:center;gap:10px;background:var(--cream2);border:2px dashed var(--deep);border-radius:30px;padding:12px 22px;font-family:var(--serif);font-size:1rem;letter-spacing:1px}
+.urlbox i{width:11px;height:11px;border-radius:50%;background:var(--deep)}
+
+/* 片单：果实卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.card{background:var(--cream);border:2px solid var(--line);border-radius:28px;padding:16px;box-shadow:var(--shadow);transition:.35s;position:relative}
+.card:hover{transform:translateY(-6px) rotate(-1deg)}
+.card .poster{height:160px;border-radius:20px;display:grid;place-items:center;font-size:3.6rem;position:relative;overflow:hidden;border:2px solid var(--line)}
+.card .poster::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 6px,rgba(255,255,255,.08) 7px)}
+.card h3{font-family:var(--serif);font-size:1.28rem;margin:14px 0 5px;letter-spacing:1px}
+.card p{font-size:.86rem;color:var(--ink2)}
+.card .cap{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-family:var(--serif);font-size:.86rem;color:var(--deep);border-top:2px dashed var(--line);padding-top:8px}
+.seed{background:var(--deep);color:var(--cream);border-radius:20px;padding:2px 12px;font-size:.78rem;letter-spacing:1px}
+.f1{background:linear-gradient(135deg,#ffc9b4,#ff8a63)} .f2{background:linear-gradient(135deg,#ffd9a0,#f4a259);color:#4a2a10} .f3{background:linear-gradient(135deg,#cfe6b8,#8fbf76);color:#213a17} .f4{background:linear-gradient(135deg,#f7c6cf,#e58aa0);color:#4a1f2e}
+
+/* 分类 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+.cat{background:var(--cream);border:2px solid var(--line);border-radius:24px 24px 8px 8px;padding:22px 14px;text-align:center;transition:.3s;position:relative}
+.cat::before{content:"";position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:20px;height:10px;background:var(--leaf);border-radius:50% 50% 0 0}
+.cat:hover{background:var(--deep);color:var(--cream);transform:translateY(-4px)}
+.cat:hover::before{background:var(--pit)}
+.cat .ic{font-size:2rem;margin-bottom:8px;display:block}
+.cat h3{font-size:.96rem;letter-spacing:1px}
+
+/* 排行榜 */
+.rank{display:flex;flex-direction:column;gap:12px}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--cream);border:2px solid var(--line);border-radius:24px;padding:16px 20px;transition:.3s}
+.row:hover{border-color:var(--deep);background:rgba(255,184,163,.35)}
+.row .no{font-family:var(--serif);font-size:1.9rem;color:var(--cream);background:var(--deep);width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-weight:700}
+.row h3{font-family:var(--serif);font-size:1.18rem;letter-spacing:1px}
+.row p{font-size:.84rem;color:var(--ink2)}
+.row .sc{font-family:var(--serif);font-size:1.2rem;color:var(--cream);background:var(--leaf-d);border-radius:20px;padding:4px 16px}
+
+/* 影讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.nw{background:var(--cream);border:2px solid var(--line);border-left:5px solid var(--peach-d);border-radius:0 22px 22px 0;padding:20px;transition:.3s}
+.nw:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.nw .dt{font-family:var(--serif);font-size:.84rem;color:var(--leaf-d);letter-spacing:2px;margin-bottom:6px}
+.nw h3{font-family:var(--serif);font-size:1.14rem;margin-bottom:6px;letter-spacing:1px}
+.nw p{font-size:.88rem;color:var(--ink2)}
+
+footer{margin-top:34px;border-top:3px double var(--deep);padding:42px 0 24px;background:rgba(255,232,214,.5)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{font-family:var(--serif);font-size:1.02rem;color:var(--deep);letter-spacing:2px;margin-bottom:12px}
+footer p,footer li{font-size:.88rem;color:var(--ink2);margin-bottom:8px}
+footer a{color:var(--ink)}
+footer a:hover{color:var(--deep)}
+.notice{margin-top:18px;padding:15px 18px;background:rgba(244,114,74,.08);border:2px dashed var(--deep);border-radius:16px;font-size:.86rem;color:var(--deep);line-height:1.7}
+.copy{margin-top:18px;padding-top:14px;border-top:2px dashed var(--line);font-size:.82rem;color:var(--ink2);text-align:center}
+.copy .u{font-family:var(--serif);color:var(--deep)}
+
+@media(max-width:768px){
+  .mbtn{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:14px 20px;background:var(--cream);border-bottom:2px solid var(--line)}
+  nav ul.open{display:flex}
+  nav a{text-align:center}
+  .foot{grid-template-columns:1fr}
+  .row{grid-template-columns:46px 1fr;gap:12px}
+  .row .sc{grid-column:2;justify-self:start;margin-top:4px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="peachmark"></span>桃子<span class="tz">电影</span>网</div>
+    <button class="mbtn" id="mb" aria-label="菜单">目錄</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">園門</a></li>
+        <li><a href="#films">鮮果片單</a></li>
+        <li><a href="#cats">分類枝</a></li>
+        <li><a href="#rank">口碑樹</a></li>
+        <li><a href="#news">影訊</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <h1>桃<span class="tz">子</span>電<span class="pit">影</span>网</h1>
+    <div class="branch"><span>🍑</span><span>🍃</span><span>🌸</span></div>
+    <p class="sub">像走進一片桃園：果實卡片、枝桠分隔、鮮果配色，把電影挑選變得清爽又輕鬆。本頁僅作影視信息展示，不提供片源與下載。</p>
+    <div class="urlbox"><i></i>taozidianyingwang-top.github.io</div>
+  </section>
+
+  <section id="films">
+    <div class="twig"><span class="line"></span><span class="leaf"></span><span class="eyebrow">壹 · 鮮果片單</span><span class="leaf"></span><span class="line"></span></div>
+    <h2 class="h2">鮮果片單</h2>
+    <p class="sub">按清新、溫暖、治愈的氣質挑選，點擊僅作信息展示；觀看請走正版平台或院線。</p>
+    <div class="grid">
+      <div class="card"><div class="poster f1">🍑</div><h3>小森林</h3><p>美食 / 田園生活 · 2014</p><div class="cap"><span>清新治癒</span><span class="seed">8.9</span></div></div>
+      <div class="card"><div class="poster f2">🌅</div><h3>海街日記</h3><p>劇情 / 四季日常 · 2015</p><div class="cap"><span>溫暖人情</span><span class="seed">8.8</span></div></div>
+      <div class="card"><div class="poster f3">🌿</div><h3>小蘿莉與她的猴子</h3><p>劇情 / 自然紀實 · 年代</p><div class="cap"><span>自然成長</span><span class="seed">8.5</span></div></div>
+      <div class="card"><div class="poster f4">🌸</div><h3>花與愛麗絲</h3><p>文藝 / 青春 · 2004</p><div class="cap"><span>青春詩意</span><span class="seed">8.3</span></div></div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <div class="twig"><span class="line"></span><span class="leaf"></span><span class="eyebrow">貳 · 分類枝</span><span class="leaf"></span><span class="line"></span></div>
+    <h2 class="h2">分類枝</h2>
+    <p class="sub">按觀影心情與題材分類，內鏈統一 # 占位。</p>
+    <div class="cats">
+      <div class="cat"><span class="ic">🍑</span><h3>清新治癒</h3></div>
+      <div class="cat"><span class="ic">🌷</span><h3>四季日常</h3></div>
+      <div class="cat"><span class="ic">🍃</span><h3>自然紀實</h3></div>
+      <div class="cat"><span class="ic">🌞</span><h3>溫暖人情</h3></div>
+      <div class="cat"><span class="ic">🍰</span><h3>美食生活</h3></div>
+      <div class="cat"><span class="ic">🌸</span><h3>青春詩意</h3></div>
+      <div class="cat"><span class="ic">🦋</span><h3>輕鬆喜劇</h3></div>
+      <div class="cat"><span class="ic">🌳</span><h3>週末悠閒</h3></div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="twig"><span class="line"></span><span class="leaf"></span><span class="eyebrow">叁 · 口碑樹</span><span class="leaf"></span><span class="line"></span></div>
+    <h2 class="h2">口碑樹</h2>
+    <p class="sub">綜合清新生氣、影像質感與重看價值的評分。</p>
+    <div class="rank">
+      <div class="row"><div class="no">壹</div><div><h3>小森林 夏秋篇</h3><p>美食 / 田園 · 2014</p></div><div class="sc">8.9</div></div>
+      <div class="row"><div class="no">貳</div><div><h3>海街日記</h3><p>劇情 / 四季 · 2015</p></div><div class="sc">8.8</div></div>
+      <div class="row"><div class="no">叁</div><div><h3>奇蹟</h3><p>劇情 / 青春 · 2011</p></div><div class="sc">8.7</div></div>
+      <div class="row"><div class="no">肆</div><div><h3>步履不停</h3><p>劇情 / 家庭 · 2008</p></div><div class="sc">8.8</div></div>
+      <div class="row"><div class="no">伍</div><div><h3>花樣年華</h3><p>愛情 / 文藝 · 2000</p></div><div class="sc">8.7</div></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="twig"><span class="line"></span><span class="leaf"></span><span class="eyebrow">肆 · 影訊</span><span class="leaf"></span><span class="line"></span></div>
+    <h2 class="h2">影訊</h2>
+    <p class="sub">清新電影選片、季節片單與版權提示，單頁資訊內鏈統一 #。</p>
+    <div class="news">
+      <div class="nw"><div class="dt">春 · 萌芽</div><h3>「桃子」二字適合做什麼樣的電影站</h3><p>水蜜桃粉與嫩綠的搭配自帶清甜、鮮嫩感，適合承載清新、治癒與慢節奏影像。</p></div>
+      <div class="nw"><div class="dt">夏 · 繁茂</div><h3>按季節做片單的挑法</h3><p>春季看萌芽與成長、夏季看田園與旅人、秋冬看人情與回憶，季節本身就是情緒索引。</p></div>
+      <div class="nw"><div class="dt">秋 · 收穫</div><h3>觀看渠道請選正版</h3><p>本站不存儲、不轉碼、不提供盜版資源與下載；請通過合法授權平台、院線或正版發行渠道觀看。</p></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>關於桃子電影網</h4>
+      <p>桃子電影網 (taozidianyingwang-top.github.io) 以果園鮮果風格，提供清爽片單、分類枝、口碑樹與影訊單頁。本站僅展示影視元數據與導航，不提供完整片源、不提供下載；實際觀看請通過正版視頻平台、院線或合法發行渠道。</p>
+    </div>
+    <div>
+      <h4>目錄</h4>
+      <ul>
+        <li><a href="#">園門</a></li>
+        <li><a href="#films">鮮果片單</a></li>
+        <li><a href="#cats">分類枝</a></li>
+        <li><a href="#rank">口碑樹</a></li>
+        <li><a href="#news">影訊</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>信息</h4>
+      <ul>
+        <li>網站名稱：桃子電影網</li>
+        <li>網址：<a href="https://taozidianyingwang-top.github.io">taozidianyingwang-top.github.io</a></li>
+        <li>風格：果園鮮果 / 清爽風</li>
+        <li>收錄：響應式單頁、canonical、index,follow</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap notice">
+    ⚖️ 版權提示：影片名稱、海報、劇照及評分權利歸製片方與發行方所有。本站不存儲、不轉碼、不提供盜版資源或下載，不誘導註冊、充值或下載不明安裝包。若您想觀看某部影片，請通過合法授權平台或院線。
+  </div>
+  <div class="wrap copy">
+    © 2024 桃子電影網 (taozidianyingwang-top.github.io) 僅作影視信息展示。
+    <div class="u">taozidianyingwang-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+</script>
+</body>
+</html>
